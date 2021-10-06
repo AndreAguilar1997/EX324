@@ -1,0 +1,76 @@
+--tabla usuario
+CREATE TABLE usuario( primary key,
+  usuario varchar(30) NOT NULL,
+  contrase varchar(255) NOT NULL,
+  rol varchar(15)
+);
+INSERT INTO usuario (usuario, contrase) VALUES
+('jhoselin', '123456'),
+('Andrea', '789456'),
+('Aguilar', '13381197'); 
+
+---tabla usuarios
+CREATE TABLE usuarios(
+  ci varchar(10) primary key,
+  usuario varchar(30) NOT NULL,
+  contrase varchar(255) NOT NULL,
+  rol varchar(15)
+);
+INSERT INTO usuarios (ci, usuario, contrase, rol) VALUES
+('88888888', 'Andrea', '111111', 'estudiante'),
+('99999999', 'lopez', '222222', 'docente'),
+('10101010', 'luz', '333333', 'estudiante'),
+('12121212', 'jose', '444444', 'estudiante');
+
+CREATE TABLE persona(
+  ci varchar(10) primary key,
+  nombrec varchar(55) NOT NULL,
+  fechan date, 
+  departamento varchar(2)
+);
+
+INSERT INTO estudiante (ci, nombrec, fechan, departamento) VALUES
+('11111111', 'maria quispe', '2000-04-13', 'LP'),
+('22222222', 'Duglas Apaza', '1999-04-28', 'CB'),
+('33333333', 'Franz Quiroga', '2001-05-28', 'SC'),
+('44444444', 'Mario Perez', '1998-09-18', 'LP'),
+('55555555', 'juan Gonzales', '1999-11-28', 'LP'),
+('66666666', 'Daniela Morales', '2000-10-28', 'SC'),
+('77777777', 'Luz Condori', '2000-01-23', 'CB'),;
+
+
+create table notas (
+  ci varchar(10) NOT NULL,
+  sigla varchar(7) NOT NULL,
+  nota1 integer,
+  nota2 integer,
+  nota3 integer,
+  notafinal iinteger
+); 
+
+--
+-- Volcado de datos para la tabla notas--
+
+INSERT INTO notas (ci, sigla, nota1, nota2, nota3, notafinal) VALUES
+('2345678', 'inf-111', 70, 80, 60, 70),
+('2345678', 'inf-121', 20, 100, 90, 70),
+('11111111', 'inf-112', 50, 50, 50, 50),
+('11111111', 'inf-124', 90, 90, 90, 90),
+('22222222', 'inf-114', 55, 55, 100, 70),
+('22222222', 'inf-123', 100, 30, 50, 60);
+
+-- 
+
+
+----- tabla estudiante
+CREATE TABLE estudiante(
+  ci varchar(10) primary key,
+  nombre varchar(30) NOT NULL,
+  fechan varchar(255) NOT NULL,
+  departamento varchar(15)
+);
+
+
+INSERT INTO estudiante (ci, nombre, fechan, departamento) VALUES
+('14141414', 'Andrea Aguilar', '1996-10-28', 'SC'),
+('19191919', ' jhoselin lopez', '1997-01-23', 'LP');

@@ -1,0 +1,27 @@
+
+---tabla usuario
+CREATE TABLE usuarios(
+  ci varchar(10) primary key,
+  usuario varchar(30) NOT NULL,
+  contrase varchar(255) NOT NULL,
+  rol varchar(15)
+);
+
+
+INSERT INTO usuarios (ci, usuario, contrase, rol) VALUES
+('88888888', 'Andrea', '111111', 'estudiante'),
+('99999999', 'lopez', '222222', 'docente'),
+('10101010', 'luz', '333333', 'estudiante'),
+('12121212', 'jose', '444444', 'estudiante');
+----- tabla estudiante
+CREATE TABLE estudiante(
+  ci varchar(10) primary key,
+  nombre varchar(30) NOT NULL,
+  fechan varchar(255) NOT NULL,
+  departamento varchar(15)
+);
+
+
+INSERT INTO estudiante (ci, nombre, fechan, departamento) VALUES
+('14141414', 'Andrea Aguilar', '1996-10-28', 'SC'),
+('19191919', ' jhoselin lopez', '1997-01-23', 'LP');

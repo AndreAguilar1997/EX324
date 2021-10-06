@@ -1,0 +1,16 @@
+-----parte del 4 
+ select 
+        nf.sigla,
+		nf.departamento,
+        case WHEN departamento='CH' then promedio end CH, 
+        case WHEN departamento='LP' then promedio end LP,
+        case WHEN departamento='CB' then promedio end CB,
+        
+        case WHEN departamento='PT' then promedio end PT,
+        case WHEN departamento='TJ' then promedio end TJ,
+        case WHEN departamento='SC' then promedio end SC,
+        case WHEN departamento='BE' then promedio end BE,
+        case WHEN departamento='PD' then promedio end PD
+        FROM (
+            SELECT n.sigla, avg(n.notafinal) promedio,p.departamento FROM notas n join persona p On p.ci=n.ci GROUP by n.sigla,p.departamento
+        ) AS nf 
